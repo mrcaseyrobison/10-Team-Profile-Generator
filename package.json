@@ -1,0 +1,28 @@
+{
+  "name": "10-team-profile-generator",
+  "version": "1.0.0",
+  "description": "A team generator using Node JS, Jest and Inquirer",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrcaseyrobison/10-Team-Profile-Generator.git"
+  },
+  "author": "Casey Robison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrcaseyrobison/10-Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/mrcaseyrobison/10-Team-Profile-Generator#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
