@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/mrcaseyrobison/10-Team-Profile-Generator#readme",
   "devDependencies": {
-    "jest": "^28.1.3"
+    "jest": "^24.8.0"
   },
   "dependencies": {
     "inquirer": "^8.2.4"
