@@ -56,3 +56,31 @@ const generateEngineer = function(engineer) {
     <div>
     `
 };
+
+// Function to Render HTML
+function renderHTML(data) {
+    employeeArray = [];
+
+    for (let i = 0; i < data.length; i++) {
+        const employee = data[i];
+        const role = employee.getRole();
+
+        // Call Intern Function
+        if (role === "Intern") {
+            const internCard = renderIntern(employee);
+            employeeArray.push(internCard);
+        }
+
+        // Call Engineer Function
+        if (role === "Engineer") {
+            const internCard = renderEngineer(employee);
+            employeeArray.push(engineerCard);
+        }
+
+        // Call Manager Function
+        if (role === "Manager") {
+            const internCard = renderManager(employee);
+            employeeArray.push(managerCard);
+        }
+    }
+}
