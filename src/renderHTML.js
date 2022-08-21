@@ -127,4 +127,4 @@ const renderTeamHTML = function (roleCards) {
 }
 
 // Export to Index
-module.exports = remderHTML;
+module.exports = renderHTML;
