@@ -141,4 +141,48 @@ const addNewEmployee = () => {
             default: false
         }
     ])
-}
+    .then(employeeData => {
+        let { name, id, role, github, school, confirmNewEmployee } = employeeData;
+        let employee;
+
+        if (role === 'Engineer') {
+            employee = new Engineer (name, id, emial, github);
+            console.log (employee);
+        } else if (role === "Intern") {
+            employee = new Intern (name, id, email, school);
+            console.log (employee);
+        }
+
+        teamArray.push(employee);
+        if(confirmNewEmployee) {
+            return addNewEmployee(teamArray);
+        } else {
+            return teamArray;
+        }
+    })
+};
+
+// Function to write and store HTML file in dist folder
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("Your HTML page has been successfully written")
+        }
+    })
+};
+
+// Initialize JS
+addManager()
+    .then(addNewEmployee)
+    .then(teamArray => {
+        return renderHTML(teamArray);
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .catch(err => {
+        console.log(err);
+    });
