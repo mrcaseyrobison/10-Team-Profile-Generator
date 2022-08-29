@@ -53,3 +53,47 @@ const manager = () => {
 };
 
 // Other Employee Prompts
+
+const addNewEmployee = () => {
+    console.log(`
+    
+    ******************
+    Add New Employees
+    ******************
+    `);
+
+    return inquirer.prompt ([
+        {
+            type: 'list',
+            name: 'role',
+            message: 'Choose the role for your new employee',
+            choices: ['Engineer', 'Intern']
+        },
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the name of this employee?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log ('You must enter a name to continue');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Enter the ID of this employee',
+            validate: nameInput => {
+                if (isNaN(nameInput)) {
+                    console.log ('You must enter an ID to continue')
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        },
+    ])
+}
