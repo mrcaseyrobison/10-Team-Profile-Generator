@@ -3,18 +3,18 @@ const fs = require("fs");
 const inquirer = require("inquirer")
 
 // Profiles
-const Intern = require("lib/intern.js");
-const Engineer = require("lib/engineer.js");
-const Manager = require("lib/manager.js");
+const Intern = require("./lib/intern.js");
+const Engineer = require("./lib/engineer.js");
+const Manager = require("./lib/manager.js");
 
 // Team Array
 const teamArray = [];
 
 // HTML Generator
-const renderHTML = require("src/renderHTML.js");
+const renderHTML = require("./src/renderHTML.js");
 
 // Manager Prompt
-const manager = () => {
+const addManager = () => {
     return inquirer.prompt ([
         {
             type: "input",
@@ -146,7 +146,7 @@ const addNewEmployee = () => {
         let employee;
 
         if (role === 'Engineer') {
-            employee = new Engineer (name, id, emial, github);
+            employee = new Engineer (name, id, email, github);
             console.log (employee);
         } else if (role === "Intern") {
             employee = new Intern (name, id, email, school);
