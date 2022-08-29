@@ -19,7 +19,7 @@ const addManager = () => {
         {
             type: "input",
             name: "name",
-            message: "Please add info for the manager of this team.",
+            message: "What is the name for the manager of this team?",
             validate: managerName => {
                 if (managerName) {
                     return true;
@@ -28,6 +28,32 @@ const addManager = () => {
                     return false;
                 }
             }     
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Enter the ID of the team manager',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log ('You must enter an ID to continue');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter the e-mail for the team manager',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log ('You must enter a valid email to continue');
+                    return false;
+                }
+            }
         },
         {
             type: "input",
@@ -142,7 +168,7 @@ const addNewEmployee = () => {
         }
     ])
     .then(employeeData => {
-        let { name, id, role, github, school, confirmNewEmployee } = employeeData;
+        let { name, id, email, role, github, school, confirmNewEmployee } = employeeData;
         let employee;
 
         if (role === 'Engineer') {

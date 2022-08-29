@@ -4,7 +4,7 @@ const renderIntern = function(intern) {
     <div class="col-4 mt-4">
         <div class="card h-100">
             <div class="card-header">
-                <h3>${inern.name}</h3>
+                <h3>${intern.name}</h3>
                 <h4>INTERN</h4><i class="material-icons">assignment_ind</i>
             </div>
 
@@ -73,13 +73,13 @@ renderHTML = (data) => {
 
         // Call Engineer Function
         if (role === "Engineer") {
-            const internCard = renderEngineer(employee);
+            const engineerCard = renderEngineer(employee);
             employeeArray.push(engineerCard);
         }
 
         // Call Manager Function
         if (role === "Manager") {
-            const internCard = renderManager(employee);
+            const managerCard = renderManager(employee);
             employeeArray.push(managerCard);
         }
     }
