@@ -87,13 +87,58 @@ const addNewEmployee = () => {
             name: 'id',
             message: 'Enter the ID of this employee',
             validate: nameInput => {
-                if (isNaN(nameInput)) {
-                    console.log ('You must enter an ID to continue')
-                    return false;
-                } else {
+                if (nameInput) {
                     return true;
+                } else {
+                    console.log ('You must enter an ID to continue');
+                    return false;
                 }
             }
         },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter the e-mail for this employee',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log ('You must enter a valid email to continue');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Please enter the GitHub username for this employee',
+            when: (input) => input.role === 'Engineer',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log ("You must provide a GitHub username to continue");
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'Please enter university for this intern',
+            when: (input) => input.role === 'Intern',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log ("You must the univeristy for this intern to continue");
+                }
+            }
+        },
+        {
+            type: 'confirm',
+            name: 'confirmNewEmployee',
+            message: 'Would you like to add new team members?',
+            default: false
+        }
     ])
 }
