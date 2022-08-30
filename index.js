@@ -164,7 +164,6 @@ const addNewEmployee = () => {
             type: 'confirm',
             name: 'confirmNewEmployee',
             message: 'Would you like to add new team members?',
-            default: false
         }
     ])
     .then(employeeData => {
