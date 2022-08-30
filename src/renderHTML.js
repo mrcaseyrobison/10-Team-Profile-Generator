@@ -14,19 +14,20 @@ const renderTeamHTML = function (roleCards) {
     </head>
     <body>
         <header>
-            <nav class="navbar" id="navbar">
+            <nav id="navbar">
                 <h1>Team Profile</h1>
             </nav>
         </header>
         <main>
-            <div class="container-fluid">
-                <div class="row justify-content-center" id="team-cards">
+            <div class="container">
+                <div id="team-cards">
                     ${roleCards}
                 </div>
             </div>
         </main>
     </body>
-    </html>`;
+    </html>
+    `;
 }
 
 // Creates Manager Card
@@ -41,13 +42,12 @@ const renderManager = function(manager) {
 
             <div class="card body">
                 <ul class="list-group">
-                    <li class="list-group-item">ID: ${manager.id}</li>
-                    <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</li>
-                    <li class="list-group-item">Office Number: ${manager.officeNumber}</p>
+                    <li>ID: ${manager.id}</li>
+                    <li>Email: <a href="mailto:${manager.email}">${manager.email}</li>
+                    <li>Office Number: ${manager.officeNumber}</p>
                 </ul>
             </div>
         </div>
-    <div>
     `
 };
 
@@ -63,9 +63,9 @@ const renderEngineer = function(engineer) {
 
         <div class="card body">
             <ul class="list-group">
-                <li class="list-group-item">ID: ${engineer.id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</li>
-                <li class="list-group-item">GitHub: <a href="https://www.github.com/${engineer.github}" target="blank">${engineer.github}</a></li>
+                <li>ID: ${engineer.id}</li>
+                <li>Email: <a href="mailto:${engineer.email}">${engineer.email}</li>
+                <li>GitHub: <a href="https://www.github.com/${engineer.github}" target="blank">${engineer.github}</a></li>
             </ul>
         </div>
     </div>
@@ -84,9 +84,9 @@ const renderIntern = function(intern) {
 
         <div class="card body">
             <ul class="list-group">
-                <li class="list-group-item">ID: ${intern.id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</li>
-                <li class="list-group-item">School: ${intern.school}</li>
+                <li>ID: ${intern.id}</li>
+                <li>Email: <a href="mailto:${intern.email}">${intern.email}</li>
+                <li>School: ${intern.school}</li>
             </ul>
         </div>
     </div>
