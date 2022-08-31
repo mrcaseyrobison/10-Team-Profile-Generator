@@ -7,7 +7,7 @@ test ('creates an Engineer object', () => {
     expect(engineer.github) .toEqual(expect.any(String));
 });
 
-// Tests gitHub username
+// Tests GitHub Username
 
 test ('gets engineer gitHub value', () => {
     const engineer = new Engineer('Name', 50, 'name@company.com', 'username');
@@ -15,7 +15,7 @@ test ('gets engineer gitHub value', () => {
     expect(engineer.getGitHub()).toEqual(expect.stringContaining(engineer.github.toString()));
 });
 
-// Tests role
+// Tests Role
 
 test ('gets role of employee', () => {
     const engineer = new Engineer('Name', 50, 'name@company.com', 'username');
