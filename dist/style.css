@@ -1,0 +1,51 @@
+:root {
+    --primary: rgba(128, 128, 128, 0.44);
+    --secondary: black;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#1860e5 0%, #5f99e4 100%);
+    border: solid black 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+#team-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.employee-card {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.card {
+    margin: 5px;
+    width: 400px;
+}
+.card-header {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: solid 1px black;
+    border-radius: 3%;
+    padding: 3%;
+}
+
+.list-group {
+    line-height: 2rem;
+}
+
